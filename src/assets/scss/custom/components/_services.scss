@@ -1,0 +1,51 @@
+// ******************************** //
+// services.scss
+// ******************************** //
+
+#secvice_section {
+     .container {
+          .services {
+               .row {
+                    .col-md-4 {
+                         padding: 0 $spacer * 2;
+
+                         .service_item {
+                              .service_image_line {
+                                   height: 1px;
+                                   background-color: $primary;
+                                   margin-bottom: $spacer;
+                              }
+
+                              .service_image {
+                                   width: 100%;
+                                   height: auto;
+                                   border-radius: $border-radius;
+                              }
+
+                              .service_body {
+                                   padding: $spacer 0;
+                              }
+                         }
+
+                         &:nth-child(2) {
+                              padding-top: $spacer * 1.5;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media(max-width:998.91px) {
+     #secvice_section {
+          .container {
+               .services {
+                    .row {
+                         .col-md-4 {
+                              padding: 0 $spacer;
+                         }
+                    }
+               }
+          }
+     }
+}

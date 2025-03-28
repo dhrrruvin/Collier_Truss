@@ -1,0 +1,240 @@
+// ******************************** //
+// features.scss
+// ******************************** //
+#features_section {
+     background-color: $gray-100;
+     position: relative;
+
+     .container {
+          .row {
+               .feature_block {
+                    .feature_box {
+                         .feature_item {
+                              .feature_icon {
+                                   position: absolute;
+                                   width: $spacer * 6;
+                                   height: $spacer * 6;
+                                   line-height: $spacer * 6;
+                                   text-align: center;
+                                   font-size: $font-size-lg * 4;
+                                   border: 1px solid $danger;
+                                   border-radius: $border-radius;
+
+                                   &:before {
+                                        position: absolute;
+                                        content: '';
+                                        background: $danger;
+                                        width: $spacer * 5.13;
+                                        height: 100%;
+                                        left: 10px;
+                                        border-radius: $border-radius;
+                                   }
+
+                                   i {
+                                        background: -webkit-linear-gradient(-45deg, $danger, $gray-100 100%);
+                                        position: relative;
+                                        color: transparent;
+                                        background-clip: border-box;
+                                        -webkit-background-clip: text;
+                                   }
+                              }
+                         }
+                    }
+               }
+
+               .feature_image {
+                    border: 1px solid $border-color;
+                    border-radius: $border-radius;
+                    padding: $spacer * 0.2;
+
+                    .feature_image_zoom {
+                         overflow: hidden;
+
+                         img {
+                              width: 100%;
+                              height: auto;
+                              object-fit: cover;
+                              cursor: pointer;
+                              transition: all 0.5s ease-in-out;
+                              transform-origin: center center;
+                         }
+                    }
+
+                    &:hover {
+                         .feature_image_zoom {
+                              img {
+                                   transform: scale(1.1);
+                              }
+                         }
+                    }
+               }
+
+               &:nth-child(even) {
+                    .feature_block {
+                         .feature_box {
+                              .feature_item {
+                                   position: relative;
+
+                                   &:nth-child(odd) {
+                                        text-align: start;
+
+                                        .feature_icon {
+                                             &::before {
+                                                  top: $spacer * 0.5;
+                                             }
+
+                                             left: 0px;
+                                        }
+
+                                        .feature_text {
+                                             padding-left: $spacer * 8;
+
+                                             h4 {
+                                                  &:before {
+                                                       left: 0px;
+                                                  }
+                                             }
+                                        }
+                                   }
+
+                                   &:nth-child(even) {
+                                        text-align: end;
+
+                                        .feature_icon {
+                                             &:before {
+                                                  top: - $spacer * 0.5;
+                                             }
+
+                                             right: 0px;
+                                        }
+
+                                        .feature_text {
+                                             padding-right: $spacer * 8;
+
+                                             h4 {
+                                                  &:before {
+                                                       right: 0px;
+                                                  }
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+
+               &:nth-child(odd) {
+                    .feature_block {
+                         .feature_box {
+                              .feature_item {
+                                   position: relative;
+
+                                   &:nth-child(odd) {
+                                        text-align: end;
+
+                                        .feature_icon {
+                                             &:before {
+                                                  top: $spacer * 0.5;
+                                             }
+
+                                             right: 0px;
+                                        }
+
+                                        .feature_text {
+                                             padding-right: $spacer * 8;
+
+                                             h4 {
+                                                  &:before {
+                                                       right: 0px;
+                                                  }
+                                             }
+                                        }
+                                   }
+
+                                   &:nth-child(even) {
+                                        text-align: start;
+
+                                        .feature_icon {
+                                             &::before {
+                                                  top: - $spacer * 0.5;
+                                             }
+
+                                             left: 0px;
+                                        }
+
+                                        .feature_text {
+                                             padding-left: $spacer * 8;
+
+                                             h4 {
+                                                  &:before {
+                                                       left: 0px;
+                                                  }
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media(max-width:576px) {
+     #features_section {
+          .container {
+               .row {
+                    .feature_block {
+                         .feature_box {
+                              .feature_item {
+                                   .feature_icon {
+                                        width: $spacer * 3.5 !important;
+                                        height: $spacer * 3.5 !important;
+                                        line-height: $spacer * 3.5 !important;
+                                        font-size: $font-size-lg * 2.5 !important;
+
+                                        &::before {
+                                             width: $spacer * 2.65 !important;
+                                        }
+                                   }
+
+                                   &:nth-child(odd) {
+                                        .feature_text {
+                                             padding-left: $spacer * 4.5 !important;
+                                        }
+                                   }
+
+                                   &:nth-child(even) {
+                                        .feature_text {
+                                             padding-right: $spacer * 4.5 !important;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+
+                    &:nth-child(odd) {
+                         .feature_block {
+                              .feature_box {
+                                   .feature_item {
+                                        &:nth-child(odd) {
+                                             .feature_text {
+                                                  padding-right: $spacer * 4.5 !important;
+                                                  padding-left: 0 !important;
+                                             }
+                                        }
+
+                                        &:nth-child(even) {
+                                             .feature_text {
+                                                  padding-left: $spacer * 4.5 !important;
+                                                  padding-right: 0 !important;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}

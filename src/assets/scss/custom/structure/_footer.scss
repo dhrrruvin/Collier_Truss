@@ -1,0 +1,36 @@
+// ******************************** //
+// footer.scss
+// ******************************** //
+
+#footer {
+     padding: 19px 15px 20px;
+     color: $text-muted;
+     background-color: darken($body-bg, 2.5%);
+
+     .footer-links {
+          a {
+               color: $text-muted;
+               transition: all 0.4s;
+
+               &:hover {
+                    color: $danger;
+               }
+
+               &:first-of-type {
+                    margin-left: 0;
+               }
+
+               &::after {
+                    content: "-";
+                    color: $text-muted;
+                    font-weight: $font-weight-bold;
+                    margin: 0 $spacer;
+               }
+
+               &:last-child::after {
+                    content: "";
+                    margin: 0;
+               }
+          }
+     }
+}

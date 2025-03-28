@@ -1,0 +1,51 @@
+<!-- Navbar Start -->
+<section id="navbar_section">
+     <header>
+          <nav class="navbar topbar_menu navbar-expand-lg navbar-light fixed-top" [ngClass]="{scrolled:isScrolled}">
+               <div class="container-fluid">
+                    <!-- Logo Box Start -->
+                    <div class="logo-box">
+                         <a href="" class="logo text-center">
+                              <span class="logo-sm">
+                                   <img src="" alt="logo_sm" height="22">
+                              </span>
+                              <span class="logo-lg">
+                                   <img src="../../../assets/images/logo/logo.png" alt="logo-lg" height="60">
+                              </span>
+                         </a>
+                    </div>
+                    <!-- Logo Box End -->
+                    <!-- Navbar Toggler Start -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                         data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                         aria-label="Toggle navigation">
+                         <span class="">
+                              <i class="bi bi-list"></i>
+                         </span>
+                    </button>
+                    <!-- Navbar Toggler End -->
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                         <ul class="navbar-nav align-items-lg-center">
+                              <li class="nav-item">
+                                   <a href="" class="nav-link">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="" class="nav-link">Services</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="" class="nav-link">Features</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="" class="nav-link">
+                                        <button class="btn"
+                                             [ngClass]="{'btn-danger':isScrolled, 'btn-light':!isScrolled}">
+                                             Contact Us
+                                        </button>
+                                   </a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </nav>
+     </header>
+</section>

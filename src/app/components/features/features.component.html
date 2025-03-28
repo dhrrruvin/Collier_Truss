@@ -1,0 +1,85 @@
+<section id="features_section">
+     <div class="divider top d-none d-sm-block"></div>
+     <div class="container py-3 py-sm-5">
+          <div class="features_section_title text-center">
+               <span class="badge rounded-pill text-bg-danger mb-2">Discover Our Edge</span>
+               <h1 class="text-dark text-uppercase fw-bold text-center mb-3 mb-sm-5">Why Choose Us</h1>
+          </div>
+
+          <div class="row d-flex align-items-center justify-content-center mb-3 mb-sm-5"
+               *ngFor="let feature of features">
+               <ng-container *ngIf="features.indexOf(feature) % 2 ===0; else oddFeature">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                         <div class="feature_block">
+                              <div class="feature_box">
+                                   <div class="feature_item my-5" *ngFor="let feature_item of feature.feature_items">
+                                        <div class="feature_icon">
+                                             <i class={{feature_item.feature_icon}}></i>
+                                        </div>
+                                        <div class="feature_text">
+                                             <h4 class="text-uppercase">{{feature_item.feature_title}}</h4>
+                                             <p>{{feature_item.feature_description}}</p>
+                                             <a href={{feature_item.feature_link}} class="fw-bold">
+                                                  <ng-container
+                                                       *ngIf="feature.feature_items.indexOf(feature_item) % 2 === 0; else oddArrow">
+                                                       <i class="bi bi-arrow-right-circle me-2"></i>
+                                                       More Details
+                                                  </ng-container>
+                                                  <ng-template #oddArrow>
+                                                       More Details
+                                                       <i class="bi bi-arrow-left-circle ms-2"></i>
+                                                  </ng-template>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                         <div class="feature_image">
+                              <div class="feature_image_zoom">
+                                   <img src={{feature.feature_image}} alt="">
+                              </div>
+                         </div>
+                    </div>
+               </ng-container>
+               <ng-template #oddFeature>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                         <div class="feature_image">
+                              <div class="feature_image_zoom">
+                                   <img src={{feature.feature_image}} alt="">
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                         <div class="feature_block">
+                              <div class="feature_box">
+                                   <div class="feature_item my-4 my-sm-5"
+                                        *ngFor="let feature_item of feature.feature_items">
+                                        <div class="feature_icon">
+                                             <i class={{feature_item.feature_icon}}></i>
+                                        </div>
+                                        <div class="feature_text">
+                                             <h4 class="text-uppercase">{{feature_item.feature_title}}</h4>
+                                             <p>{{feature_item.feature_description}}</p>
+                                             <a href={{feature_item.feature_link}} class="fw-bold">
+                                                  <ng-container
+                                                       *ngIf="feature.feature_items.indexOf(feature_item) % 2 === 0; else oddArrow">
+                                                       More Details
+                                                       <i class="bi bi-arrow-left-circle ms-2"></i>
+                                                  </ng-container>
+                                                  <ng-template #oddArrow>
+                                                       <i class="bi bi-arrow-right-circle me-2"></i>
+                                                       More Details
+                                                  </ng-template>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </ng-template>
+          </div>
+     </div>
+     <div class="divider bottom d-none d-sm-block"></div>
+</section>

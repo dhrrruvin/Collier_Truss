@@ -1,0 +1,35 @@
+// ******************************** //
+// theme.scss
+// ******************************** //
+
+// font files
+@import "custom/fonts";
+
+// core files
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "skins/variable";
+@import "skins/customVariable";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// icon files
+@import "icon.scss";
+
+// general files
+@import "custom/geneal";
+
+// component files
+
+// structure files
+@import "../scss/custom/structure/navbar";
+@import "../scss/custom/structure/footer";
+
+// custom component files
+@import "../scss/custom/components/background";
+@import "../scss/custom/components/hero";
+@import "../scss/custom/components/services";
+@import "../scss/custom/components/features";
+@import "../scss/custom/components/contactUs";
+
+// theme component files

@@ -1,0 +1,304 @@
+// ******************************** //
+// contactUs.scss
+// ******************************** //
+
+#contactUs_section {
+     .container {
+          .contactUs_info {
+               .contactUs_section_title {
+                    .sub_title {
+                         p {
+                              position: relative;
+                              display: inline-block;
+                         }
+
+                         .decor_left {
+                              position: relative;
+                              top: -2px;
+                              display: inline-block;
+                              width: 70px;
+                              height: 5px;
+                              background: transparent;
+
+                              span {
+                                   content: "";
+                                   position: absolute;
+                                   top: 0;
+                                   left: 0;
+                                   bottom: 0;
+                                   width: 50px;
+                                   height: 1px;
+                                   background: $danger;
+                                   margin: 2px 0;
+                              }
+
+                              &:before {
+                                   content: "";
+                                   position: absolute;
+                                   top: 0;
+                                   right: 0;
+                                   bottom: 0;
+                                   width: 5px;
+                                   height: 5px;
+                                   background: $danger;
+                                   border-radius: 50%;
+                              }
+
+                              &:after {
+                                   content: "";
+                                   position: absolute;
+                                   top: 0;
+                                   right: 10px;
+                                   bottom: 0;
+                                   width: 5px;
+                                   height: 5px;
+                                   background: $danger;
+                                   border-radius: 50%;
+                              }
+                         }
+
+                         .decor_right {
+                              position: relative;
+                              top: -2px;
+                              display: inline-block;
+                              width: 70px;
+                              height: 5px;
+                              background: transparent;
+
+                              span {
+                                   content: "";
+                                   position: absolute;
+                                   top: 0;
+                                   right: 0;
+                                   bottom: 0;
+                                   width: 50px;
+                                   height: 1px;
+                                   background: $danger;
+                                   margin: 2px 0;
+                              }
+
+                              &:before {
+                                   content: "";
+                                   position: absolute;
+                                   top: 0;
+                                   left: 0;
+                                   bottom: 0;
+                                   width: 5px;
+                                   height: 5px;
+                                   background: $danger;
+                                   border-radius: 50%;
+                              }
+
+                              &:after {
+                                   content: "";
+                                   position: absolute;
+                                   top: 0;
+                                   left: 10px;
+                                   bottom: 0;
+                                   width: 5px;
+                                   height: 5px;
+                                   background: $danger;
+                                   border-radius: 50%;
+                              }
+                         }
+                    }
+               }
+
+               .contactUs_address_box {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    .single_contact_address_box {
+                         position: relative;
+                         display: block;
+                         background: $gray-100;
+                         padding: $spacer * 4 $spacer * 2;
+
+                         h4 {
+                              line-height: 1.5rem;
+                         }
+
+                         &.main_box {
+                              background: $danger;
+                              padding: $spacer * 2;
+                              margin-top: -20px;
+                              margin-bottom: -20px;
+                              color: $white;
+
+                              ul {
+                                   li {
+                                        position: relative;
+                                        display: block;
+                                        padding-left: $spacer * 4;
+                                        border-bottom: 1px solid $border-color;
+
+                                        &:last-child {
+                                             border: none;
+                                             margin-bottom: 0;
+                                             padding-bottom: 0;
+                                        }
+
+                                        .address_title {
+                                             position: absolute;
+                                             top: 2px;
+                                             left: 0;
+                                        }
+
+                                        .address_text {
+                                             position: relative;
+                                             display: block;
+
+                                             a {
+                                                  color: $white;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     .contactUs_form {
+          position: relative;
+
+          .container-fluid {
+
+               img {
+                    width: 100%;
+                    height: 100%;
+               }
+
+               .contactUs_form_container {
+                    position: absolute;
+                    left: 50%;
+                    bottom: $spacer;
+                    transform: translateX(-50%);
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border-radius: $border-radius;
+
+                    .card {
+                         background: transparent !important;
+
+                         .contactUs_section_title {
+                              .sub_title {
+                                   p {
+                                        position: relative;
+                                        display: inline-block;
+                                   }
+
+                                   .decor_left {
+                                        position: relative;
+                                        top: -2px;
+                                        display: inline-block;
+                                        width: 70px;
+                                        height: 5px;
+                                        background: transparent;
+
+                                        span {
+                                             content: "";
+                                             position: absolute;
+                                             top: 0;
+                                             left: 0;
+                                             bottom: 0;
+                                             width: 50px;
+                                             height: 1px;
+                                             background: $primary;
+                                             margin: 2px 0;
+                                        }
+
+                                        &:before {
+                                             content: "";
+                                             position: absolute;
+                                             top: 0;
+                                             right: 0;
+                                             bottom: 0;
+                                             width: 5px;
+                                             height: 5px;
+                                             background: $primary;
+                                             border-radius: 50%;
+                                        }
+
+                                        &:after {
+                                             content: "";
+                                             position: absolute;
+                                             top: 0;
+                                             right: 10px;
+                                             bottom: 0;
+                                             width: 5px;
+                                             height: 5px;
+                                             background: $primary;
+                                             border-radius: 50%;
+                                        }
+                                   }
+                              }
+                         }
+
+                         form {
+
+                              input,
+                              textarea {
+                                   background: transparent !important;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+// @media (max-width: 991.88px) {
+//      #contactUs_section {
+//           .contactUs_form {
+//                .container-fluid {
+//                     img {
+//                          height: 110%;
+//                     }
+
+//                     .contactUs_form_container {
+//                          bottom: $spacer * 0.2;
+//                     }
+//                }
+//           }
+//      }
+// }
+
+// @media (max-width: 768px) {
+//      #contactUs_section {
+//           .contactUs_form {
+//                .container-fluid {
+//                     img {
+//                          height: 120%;
+//                     }
+
+//                     .contactUs_form_container {
+//                          bottom: $spacer;
+//                     }
+//                }
+//           }
+//      }
+// }
+
+// @media (max-width: 576px) {
+//      #contactUs_section {
+//           .contactUs_form {
+//                .container-fluid {
+//                     img {
+//                          display: none;
+//                     }
+
+//                     .contactUs_form_container {
+//                          position: relative;
+
+//                          .card {
+//                               background-color: $white;
+//                          }
+//                     }
+//                }
+//           }
+//      }
+// }

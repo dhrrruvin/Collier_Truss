@@ -1,0 +1,55 @@
+// ******************************** //
+// hero.scss
+// ******************************** //
+
+#hero_section {
+     .hero_img {
+          background-image: url(../../../images/hero/hero1.jpg);
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 100vh;
+
+          &::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-color: rgba($dark, 0.6);
+               z-index: 1;
+          }
+
+          .hero_text {
+               position: absolute;
+               top: 70%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               text-align: center;
+               color: $white;
+               z-index: 2;
+          }
+     }
+}
+
+@media (max-width: 768px) {
+     #hero_section {
+          .hero_img {
+               .hero_text {
+                    width: 60%;
+               }
+          }
+     }
+}
+
+@media (max-width: 576px) {
+     #hero_section {
+          .hero_img {
+               .hero_text {
+                    width: 80%;
+               }
+          }
+     }
+}
