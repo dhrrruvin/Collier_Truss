@@ -42,7 +42,23 @@
                .services {
                     .row {
                          .col-md-4 {
-                              padding: 0 $spacer;
+                              padding: 0 $spacer * 0.5;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media(max-width:768px) {
+     #secvice_section {
+          .container {
+               .services {
+                    .row {
+                         .col-md-4 {
+                              &:nth-child(2) {
+                                   padding-top: 0;
+                              }
                          }
                     }
                }
