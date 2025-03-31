@@ -2,6 +2,31 @@
 // background.scss
 // ******************************** //
 
+// gradients
+.bg_gradient {
+     background: linear-gradient(180deg, rgba($primary, 0.05) 0%, rgba($primary, 0.02) 100%);
+}
+
+.bg_gradient2 {
+     background: linear-gradient($gray-200 0%, $gray-100 100%) no-repeat left center;
+}
+
+.bg_gradient3 {
+     background: linear-gradient(#f4f5f7 0, #fafafb 100%);
+}
+
+.bg_gradient4 {
+     background: linear-gradient(rgba($orange, 0.075) 0%, rgba($warning, 0.1) 100%) no-repeat left center;
+}
+
+.bg_gradient5 {
+     background: linear-gradient(rgba($orange, 0.05) 0%, rgba($orange, 0.07) 100%) no-repeat left center;
+}
+
+.bg_gradient6 {
+     background: linear-gradient(rgba($primary, 0.12) 0%, rgba($primary, 0.02) 100%) no-repeat top center;
+}
+
 // divider
 .divider {
      position: absolute;
@@ -26,5 +51,57 @@
           width: 100%;
           height: 120px;
           transform: scaleX(1) scaleY(-1);
+     }
+}
+
+// shape
+.shape {
+     position: absolute;
+     pointer-events: none;
+     overflow: hidden;
+
+     &.left {
+          top: 0;
+          bottom: 0;
+          left: -1px;
+     }
+
+     &.right {
+          top: 0;
+          right: -1px;
+          bottom: 0;
+     }
+
+     &.bottom {
+          bottom: -2px;
+          left: 0;
+          right: 0;
+
+          > svg {
+               width: 100%;
+          }
+     }
+
+     &.top {
+          top: -2px;
+          left: 0;
+          right: 0;
+
+          > svg {
+               width: 100%;
+          }
+     }
+
+     > svg {
+          width: auto;
+          height: 100%;
+     }
+}
+
+@media (max-width: 768px) {
+     .shape {
+          &.bottom {
+               bottom: -5px;
+          }
      }
 }

@@ -6,6 +6,8 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { ServicesComponent } from "./components/services/services.component";
 import { FeaturesComponent } from "./components/features/features.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
+import { AboutUsComponent } from "./components/about-us/about-us.component";
+import { TeamMemberComponent } from "./components/team-member/team-member.component";
 
 
 @Component({
@@ -17,7 +19,9 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
           FooterComponent,
           ServicesComponent,
           FeaturesComponent,
-          NavbarComponent
+          NavbarComponent,
+          AboutUsComponent,
+          TeamMemberComponent
      ],
 
      templateUrl: './app.component.html',

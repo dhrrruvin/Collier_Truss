@@ -16,9 +16,4 @@ export class NavbarComponent {
      onWindowScroll() {
           this.isScrolled = window.scrollY > 200;
      }
-
-     toggleMenu() {
-
-     }
-
 }

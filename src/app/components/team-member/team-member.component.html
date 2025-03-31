@@ -1,0 +1,44 @@
+<section id="team_member_section">
+     <div class="bg_gradient2">
+          <div class="container text-center py-3 py-sm-5">
+               <div class="team_member_section_title mb-3">
+                    <span class="badge rounded-pill text-bg-danger mb-2">Our Team</span>
+                    <h1 class="text-dark text-uppercase fw-bold"> Meet Our Team </h1>
+                    <p class="w-50 mx-auto">
+                         Our diverse and skilled team of professionals is committed to delivering exceptional results,
+                         combining expertise and passion to bring your construction visions to life.
+                    </p>
+               </div>
+               <div class="team_member_section_deatils mb-0 mb-sm-5">
+                    <div class="row">
+                         <div *ngFor="let member of members" class="col-md-3">
+                              <div class="team_member_card border rounded p-1">
+                                   <div class="border rounded p-1">
+                                        <div class="team_member_img rounded">
+                                             <img src={{member.image}} alt={{member.name}} height="auto" width="100%">
+                                             <div class="overlay">
+                                                  <div class="overlay_content">
+                                                       <h2>{{member.name}}</h2>
+                                                       <p>{{member.position}}</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="shape bottom">
+               <svg width="1440px" height="40px" viewBox="0 0 1440 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="shape-b" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                         <g id="curve" fill="#fff">
+                              <path d="M0,30.013 C239.659,10.004 479.143,0 718.453,0 C957.763,0 1198.28,10.004 1440,30.013 L1440,40 L0,40 L0,30.013 Z"
+                                   id="Path"></path>
+                         </g>
+                    </g>
+               </svg>
+          </div>
+     </div>
+</section>
