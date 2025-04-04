@@ -32,7 +32,7 @@
                                         "input": "public"
                                    },
                                    "src/assets",
-                                   "_redirects"
+                                   "src/_redirects"
                               ],
                               "styles": [
                                    "src/assets/scss/theme.scss",
