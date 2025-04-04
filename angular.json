@@ -31,7 +31,8 @@
                                         "glob": "**/*",
                                         "input": "public"
                                    },
-                                   "src/assets"
+                                   "src/assets",
+                                   "_redirects"
                               ],
                               "styles": [
                                    "src/assets/scss/theme.scss",
