@@ -1,22 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeroComponent } from './components/hero/hero.component';
-import { ServicesComponent } from './components/services/services.component';
-import { FeaturesComponent } from './components/features/features.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
      imports: [
           BrowserModule,
-          NavbarComponent,
-          HeroComponent,
-          ServicesComponent,
-          FeaturesComponent,
-          ContactUsComponent,
-          FooterComponent
+          RouterModule.forRoot(routes),
+          NgbModule
      ],
-     providers: [],
+     providers: []
 })
 export class AppModule { }

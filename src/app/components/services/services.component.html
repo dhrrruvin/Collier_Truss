@@ -6,11 +6,14 @@
 
           <div class="services">
                <div class="row">
-                    <div *ngFor="let service of services" class="col-md-4">
+                    <div *ngFor="let service of services" class="col-lg-4 col-md-6">
                          <div class="service_item">
                               <div class="service_image_line"></div>
                               <img [src]="service.image" [alt]="service.title" class="service_image">
-
+                              <div class="hover_overlay">
+                                   <button (click)="openCarousel(service)" class="btn btn-outline-danger">Show
+                                        More</button>
+                              </div>
                               <div class="service_body">
                                    <h6 class="service_status">{{service.status}}</h6>
                                    <h4 class="service_title text-uppercase">{{service.title}}</h4>
@@ -21,4 +24,30 @@
                </div>
           </div>
      </div>
+
+     <!-- Modal with NgbCarousel -->
+     <div class="modal fade show" [ngClass]="{'d-block': showCarousel}" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+               <div class="modal-content bg-transparent border-0">
+                    <div class="modal-header border-0 pt-0">
+                         <button type="button" class="btn btn-danger" (click)="closeCarousel()" aria-label="Close">
+                              <span aria-hidden="true">
+                                   <i class="bi bi-x"></i>
+                              </span>
+                         </button>
+                    </div>
+                    <div class="modal-body py-0">
+                         <ngb-carousel *ngIf="selectedService" [showNavigationArrows]="true"
+                              [showNavigationIndicators]="true">
+                              <ng-template ngbSlide *ngFor="let image of selectedService.images">
+                                   <div class="carousel-image-container">
+                                        <img [src]="image" [alt]="selectedService.title" class="d-block w-100">
+                                   </div>
+                              </ng-template>
+                         </ngb-carousel>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="modal-backdrop fade show" *ngIf="showCarousel" (click)="closeCarousel()"></div>
 </section>

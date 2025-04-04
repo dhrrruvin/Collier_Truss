@@ -5,7 +5,7 @@
                <div class="container-fluid">
                     <!-- Logo Box Start -->
                     <div class="logo-box">
-                         <a href="" class="logo text-center">
+                         <a (click)="scrollTo('hero_section')" class="logo text-center">
                               <span class="logo-sm">
                                    <img src="" alt="logo_sm" height="22">
                               </span>
@@ -24,19 +24,23 @@
                          </span>
                     </button>
                     <!-- Navbar Toggler End -->
+                    <!-- Navbar Collapse Start -->
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                          <ul class="navbar-nav align-items-lg-center">
                               <li class="nav-item">
-                                   <a href="" class="nav-link">Home</a>
+                                   <a (click)="scrollTo('hero_section')" class="nav-link">Home</a>
                               </li>
                               <li class="nav-item">
-                                   <a href="" class="nav-link">Services</a>
+                                   <a (click)="scrollTo('about_us_section')" class="nav-link">About Us</a>
                               </li>
                               <li class="nav-item">
-                                   <a href="" class="nav-link">Features</a>
+                                   <a (click)="scrollTo('secvice_section')" class="nav-link">Services</a>
                               </li>
                               <li class="nav-item">
-                                   <a href="" class="nav-link">
+                                   <a (click)="scrollTo('features_section')" class="nav-link">Features</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a (click)="scrollTo('contactUs_section')" class="nav-link">
                                         <button class="btn"
                                              [ngClass]="{'btn-danger':isScrolled, 'btn-light':!isScrolled}">
                                              Contact Us
@@ -45,7 +49,9 @@
                               </li>
                          </ul>
                     </div>
+                    <!-- Navbar Collapse End -->
                </div>
           </nav>
      </header>
 </section>
+<!-- Navbar End -->

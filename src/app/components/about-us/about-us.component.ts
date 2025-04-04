@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-about-us',
-  imports: [],
-  templateUrl: './about-us.component.html',
-  styleUrl: './about-us.component.scss'
+     selector: 'app-about-us',
+     templateUrl: './about-us.component.html',
+     styleUrl: './about-us.component.scss'
 })
+
 export class AboutUsComponent {
 
+     scrollTo(sectionId: string) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+               element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+               });
+          }
+     }
 }
