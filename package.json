@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "postbuild": "copy src\\_redirects dist\\collier_truss\\ || echo Redirects file copy failed",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
