@@ -13,34 +13,36 @@ export class NavbarComponent implements AfterViewInit {
      isScrolled: boolean = false;
 
      ngAfterViewInit() {
-          // Create an Intersection Observer
-          const observer = new IntersectionObserver((entries) => {
-               let isHeroVisible = false;
+          if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+               // Create an Intersection Observer
+               const observer = new IntersectionObserver((entries) => {
+                    let isHeroVisible = false;
 
-               entries.forEach(entry => {
-                    if (entry.target.id === 'hero_section' && entry.isIntersecting) {
-                         isHeroVisible = true; // Hero section is visible
-                    }
+                    entries.forEach(entry => {
+                         if (entry.target.id === 'hero_section' && entry.isIntersecting) {
+                              isHeroVisible = true; // Hero section is visible
+                         }
+                    });
+
+                    // Set isScrolled based on visibility
+                    this.isScrolled = !isHeroVisible; // Set to true if hero section is not visible
                });
 
-               // Set isScrolled based on visibility
-               this.isScrolled = !isHeroVisible; // Set to true if hero section is not visible
-          });
-
-          // Observe the hero section
-          const heroSection = document.getElementById('hero_section');
-          if (heroSection) {
-               observer.observe(heroSection);
-          }
-
-          // Observe other sections
-          const sections = ['about_us_section', 'service_section', 'features_section', 'contactUs_section'];
-          sections.forEach(sectionId => {
-               const section = document.getElementById(sectionId);
-               if (section) {
-                    observer.observe(section);
+               // Observe the hero section
+               const heroSection = document.getElementById('hero_section');
+               if (heroSection) {
+                    observer.observe(heroSection);
                }
-          });
+
+               // Observe other sections
+               const sections = ['about_us_section', 'service_section', 'features_section', 'contactUs_section'];
+               sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                         observer.observe(section);
+                    }
+               });
+          }
      }
 
 
