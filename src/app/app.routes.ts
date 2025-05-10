@@ -8,7 +8,6 @@ export const routes: Routes = [
      },
      {
           path: '',
-          redirectTo: '/home',
-          pathMatch: 'full'
+          component: HeroComponent
      } // Default Route 
 ];
